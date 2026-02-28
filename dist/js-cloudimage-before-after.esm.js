@@ -1013,7 +1013,7 @@ class Ge {
       this.config.animateEasing,
       this.config.animateOnce,
       (t) => {
-        t || (this.elements.handle.style.transition = `left ${this.config.animateDuration}ms ${this.config.animateEasing}, top ${this.config.animateDuration}ms ${this.config.animateEasing}`, this.elements.clip.style.transition = `clip-path ${this.config.animateDuration}ms ${this.config.animateEasing}`), this.updatePosition(this.config.initialPosition), t || (this.animTransitionTimer = setTimeout(() => {
+        t || (this.elements.handle.style.transition = `left ${this.config.animateDuration}ms ${this.config.animateEasing}, top ${this.config.animateDuration}ms ${this.config.animateEasing}`, this.elements.clip.style.transition = `clip-path ${this.config.animateDuration}ms ${this.config.animateEasing}`), this.suppressCallbacks = !0, this.updatePosition(this.config.initialPosition), this.suppressCallbacks = !1, t || (this.animTransitionTimer = setTimeout(() => {
           this.animTransitionTimer = null, this.elements.handle.style.transition = "", this.elements.clip.style.transition = "";
         }, this.config.animateDuration));
       }

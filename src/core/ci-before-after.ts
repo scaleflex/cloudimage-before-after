@@ -537,7 +537,11 @@ export class CIBeforeAfterCore implements CIBeforeAfterInstance {
             `clip-path ${this.config.animateDuration}ms ${this.config.animateEasing}`;
         }
 
+        // Suppress callbacks during animation — the entrance animation
+        // moving to initialPosition is not a user interaction.
+        this.suppressCallbacks = true;
         this.updatePosition(this.config.initialPosition);
+        this.suppressCallbacks = false;
 
         if (!skipTransition) {
           this.animTransitionTimer = setTimeout(() => {
