@@ -1048,7 +1048,7 @@ All animations and transitions respect the `prefers-reduced-motion: reduce` medi
 The UMD bundle will be available via Scaleflex CDN:
 
 ```
-https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-before-after/1.0.0/js-cloudimage-before-after.min.js
+https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-before-after/1.0.2/js-cloudimage-before-after.min.js?vh=0ffcfe&func=proxy
 ```
 
 ### 10.7 Zero Runtime Dependencies
