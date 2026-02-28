@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.2
+
+### Bug Fixes
+
+- Fix entrance animation consuming `onSlide` callback
+
 ## v1.0.0
 
 Initial release.
