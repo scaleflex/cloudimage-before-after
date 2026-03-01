@@ -320,7 +320,7 @@ All configuration is expressed via `data-ci-before-after-*` attributes on the co
 **Auto-initialization (CDN usage):**
 
 ```html
-<script src="https://cdn.scaleflex.it/plugins/js-cloudimage-before-after/1.0.0/js-cloudimage-before-after.min.js"></script>
+<script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-before-after/1.0.3/js-cloudimage-before-after.min.js?vh=b67ce8&func=proxy"></script>
 <script>CIBeforeAfter.autoInit();</script>
 ```
 
@@ -1048,7 +1048,7 @@ All animations and transitions respect the `prefers-reduced-motion: reduce` medi
 The UMD bundle will be available via Scaleflex CDN:
 
 ```
-https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-before-after/1.0.2/js-cloudimage-before-after.min.js?vh=0ffcfe&func=proxy
+https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-before-after/1.0.3/js-cloudimage-before-after.min.js?vh=b67ce8&func=proxy
 ```
 
 ### 10.7 Zero Runtime Dependencies
