@@ -1,6 +1,6 @@
 {
   "name": "js-cloudimage-before-after",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Interactive before/after image comparison slider with zoom, labels, and accessibility",
   "license": "MIT",
   "author": "Scaleflex",
