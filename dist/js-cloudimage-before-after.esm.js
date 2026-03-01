@@ -1,4 +1,4 @@
-const fe = ["drag", "hover", "click"], de = ["horizontal", "vertical"], me = ["light", "dark"], be = ["arrows", "circle", "line"], ue = ["top", "bottom"], ge = [
+const he = ["drag", "hover", "click"], de = ["horizontal", "vertical"], me = ["light", "dark"], be = ["arrows", "circle", "line"], ue = ["top", "bottom"], ge = [
   "top-left",
   "top-center",
   "top-right",
@@ -33,16 +33,16 @@ function V(o) {
   const r = o.animate;
   let s = !1, l = 800, a = 0, c = "ease-out";
   r === !0 ? s = !0 : typeof r == "object" && (s = !0, l = Math.max(0, r.duration ?? 800), a = Math.max(0, r.delay ?? 0), c = r.easing ?? "ease-out");
-  const h = o.zoom ?? d.zoom;
+  const f = o.zoom ?? d.zoom;
   return {
     beforeSrc: o.beforeSrc,
     afterSrc: o.afterSrc,
     beforeAlt: o.beforeAlt ?? d.beforeAlt,
     afterAlt: o.afterAlt ?? d.afterAlt,
-    mode: z(o.mode, fe, d.mode, "mode"),
+    mode: z(o.mode, he, d.mode, "mode"),
     orientation: z(o.orientation, de, d.orientation, "orientation"),
     initialPosition: we(o.initialPosition ?? d.initialPosition),
-    zoom: h,
+    zoom: f,
     zoomMax: Math.max(1, o.zoomMax ?? d.zoomMax),
     zoomMin: Math.max(1, Math.min(o.zoomMin ?? d.zoomMin, o.zoomMax ?? d.zoomMax)),
     theme: z(o.theme, me, d.theme, "theme"),
@@ -58,9 +58,9 @@ function V(o) {
     animateOnce: o.animateOnce ?? d.animateOnce,
     fullscreenButton: o.fullscreenButton ?? d.fullscreenButton,
     lazyLoad: o.lazyLoad ?? d.lazyLoad,
-    zoomControls: o.zoomControls ?? (h ? d.zoomControls : !1),
+    zoomControls: o.zoomControls ?? (f ? d.zoomControls : !1),
     zoomControlsPosition: z(o.zoomControlsPosition, ge, d.zoomControlsPosition, "zoomControlsPosition"),
-    scrollHint: o.scrollHint ?? (h ? d.scrollHint : !1),
+    scrollHint: o.scrollHint ?? (f ? d.scrollHint : !1),
     keyboardStep: Math.max(0.5, o.keyboardStep ?? d.keyboardStep),
     keyboardLargeStep: Math.max(1, o.keyboardLargeStep ?? d.keyboardLargeStep),
     onSlide: o.onSlide,
@@ -99,9 +99,9 @@ function ve(o) {
   const a = e("after-alt");
   a !== null && (s.afterAlt = a);
   const c = e("mode");
-  c && (s.mode = w(c, fe, "mode"));
-  const h = e("orientation");
-  h && (s.orientation = w(h, de, "orientation"));
+  c && (s.mode = w(c, he, "mode"));
+  const f = e("orientation");
+  f && (s.orientation = w(f, de, "orientation"));
   const m = i("initial-position");
   m !== void 0 && (s.initialPosition = m);
   const b = t("zoom");
@@ -163,7 +163,7 @@ function q(o) {
   const e = document.createElement("style");
   e.id = U, e.textContent = o, document.head.appendChild(e);
 }
-function f(o, e, t) {
+function h(o, e, t) {
   const i = document.createElement(o);
   if (e && (i.className = e), t)
     for (const [n, r] of Object.entries(t))
@@ -273,7 +273,7 @@ function Q(o) {
 }
 const Ie = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>', Me = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>', Se = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>', Te = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>', Oe = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 8 22 12 18 16"/><polyline points="6 8 2 12 6 16"/><line x1="2" x2="22" y1="12" y2="12"/></svg>', De = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 18 12 22 16 18"/><polyline points="8 6 12 2 16 6"/><line x1="12" x2="12" y1="2" y2="22"/></svg>';
 function ee(o, e, t) {
-  const i = f("div", `ci-before-after-handle ci-before-after-handle--${o}`, {
+  const i = h("div", `ci-before-after-handle ci-before-after-handle--${o}`, {
     role: "slider",
     "aria-valuenow": String(Math.round(t)),
     "aria-valuemin": "0",
@@ -296,15 +296,15 @@ function ee(o, e, t) {
   return i;
 }
 function Ze(o, e) {
-  const t = f("div", "ci-before-after-handle-line"), i = f("div", "ci-before-after-handle-grip"), n = f("div", "ci-before-after-handle-line");
+  const t = h("div", "ci-before-after-handle-line"), i = h("div", "ci-before-after-handle-grip"), n = h("div", "ci-before-after-handle-line");
   e === "horizontal" ? i.innerHTML = Ie + Me : i.innerHTML = Se + Te, o.append(t, i, n);
 }
 function Re(o, e) {
-  const t = f("div", "ci-before-after-handle-grip");
+  const t = h("div", "ci-before-after-handle-grip");
   e === "horizontal" ? t.innerHTML = Oe : t.innerHTML = De, o.append(t);
 }
 function He(o) {
-  const e = f("div", "ci-before-after-handle-line"), t = f("div", "ci-before-after-handle-grip ci-before-after-handle-grip--pill"), i = f("div", "ci-before-after-handle-line");
+  const e = h("div", "ci-before-after-handle-line"), t = h("div", "ci-before-after-handle-grip ci-before-after-handle-grip--pill"), i = h("div", "ci-before-after-handle-line");
   o.append(e, t, i);
 }
 class te {
@@ -526,13 +526,13 @@ class ie {
     const i = this.abortController.signal;
     this.isPanning = !1, this.lastPanX = e, this.lastPanY = t;
     const n = e, r = t, s = (a) => {
-      const c = a.clientX - this.lastPanX, h = a.clientY - this.lastPanY;
+      const c = a.clientX - this.lastPanX, f = a.clientY - this.lastPanY;
       if (!this.isPanning) {
         const m = a.clientX - n, b = a.clientY - r;
         if (Math.hypot(m, b) < $e) return;
         this.isPanning = !0, this.container.style.cursor = "grabbing";
       }
-      this.lastPanX = a.clientX, this.lastPanY = a.clientY, this.zoomPan.pan(c, h);
+      this.lastPanX = a.clientX, this.lastPanY = a.clientY, this.zoomPan.pan(c, f);
     }, l = () => {
       this.isPanning = !1, this.container.style.cursor = "", this.cleanupWindowListeners();
     };
@@ -557,10 +557,10 @@ class ie {
     this.cleanupWindowListeners(), this.abortController = new AbortController();
     const t = this.abortController.signal, [i, n] = [e.touches[0], e.touches[1]];
     this.initialPinchDistance = Math.hypot(n.clientX - i.clientX, n.clientY - i.clientY), this.initialPinchDistance === 0 && (this.initialPinchDistance = 1), this.initialPinchZoom = this.zoomPan.getZoom();
-    const r = this.container.getBoundingClientRect(), s = (i.clientX + n.clientX) / 2 - r.left, l = (i.clientY + n.clientY) / 2 - r.top, a = (h) => {
-      if (h.touches.length !== 2) return;
-      h.preventDefault();
-      const [m, b] = [h.touches[0], h.touches[1]], g = Math.hypot(b.clientX - m.clientX, b.clientY - m.clientY) / this.initialPinchDistance;
+    const r = this.container.getBoundingClientRect(), s = (i.clientX + n.clientX) / 2 - r.left, l = (i.clientY + n.clientY) / 2 - r.top, a = (f) => {
+      if (f.touches.length !== 2) return;
+      f.preventDefault();
+      const [m, b] = [f.touches[0], f.touches[1]], g = Math.hypot(b.clientX - m.clientX, b.clientY - m.clientY) / this.initialPinchDistance;
       this.zoomPan.setZoom(this.initialPinchZoom * g, s, l);
     }, c = () => {
       this.cleanupWindowListeners();
@@ -576,17 +576,17 @@ class ie {
 }
 const Fe = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>', Ye = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/></svg>', Xe = '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>';
 function oe(o, e) {
-  const t = new v(), i = f("div", `ci-before-after-zoom-controls ci-before-after-zoom-controls--${o}`), n = f("button", "ci-before-after-zoom-in", {
+  const t = new v(), i = h("div", `ci-before-after-zoom-controls ci-before-after-zoom-controls--${o}`), n = h("button", "ci-before-after-zoom-in", {
     type: "button",
     "aria-label": "Zoom in"
   });
   n.innerHTML = Fe, t.on(n, "click", e.onZoomIn);
-  const r = f("button", "ci-before-after-zoom-out", {
+  const r = h("button", "ci-before-after-zoom-out", {
     type: "button",
     "aria-label": "Zoom out"
   });
   r.innerHTML = Ye, t.on(r, "click", e.onZoomOut);
-  const s = f("button", "ci-before-after-zoom-reset", {
+  const s = h("button", "ci-before-after-zoom-reset", {
     type: "button",
     "aria-label": "Reset zoom"
   });
@@ -594,7 +594,7 @@ function oe(o, e) {
 }
 class ne {
   constructor(e) {
-    this.timeout = null, this.el = f("div", "ci-before-after-scroll-hint", {
+    this.timeout = null, this.el = h("div", "ci-before-after-scroll-hint", {
       "aria-hidden": "true"
     });
     const t = typeof navigator < "u" && /Mac|iPhone|iPad|iPod/.test(navigator.userAgent);
@@ -610,13 +610,13 @@ class ne {
   }
 }
 function re(o, e, t, i) {
-  const n = `ci-before-after-label--${t}`, r = f(
+  const n = `ci-before-after-label--${t}`, r = h(
     "div",
     `ci-before-after-label ci-before-after-label-before ${n}`,
     { "aria-hidden": "true" }
   );
   r.textContent = o;
-  const s = f(
+  const s = h(
     "div",
     `ci-before-after-label ci-before-after-label-after ${n}`,
     { "aria-hidden": "true" }
@@ -634,7 +634,7 @@ class le {
     this.container = e, this.onFullscreenChange = t, this.button = null, this.events = new v(), this.isActive = !1, I() && (this.createButton(), this.bindEvents());
   }
   createButton() {
-    this.button = f("button", "ci-before-after-fullscreen-btn", {
+    this.button = h("button", "ci-before-after-fullscreen-btn", {
       type: "button",
       "aria-label": "Enter fullscreen",
       "aria-pressed": "false"
@@ -717,7 +717,7 @@ class ce {
     });
   }
   handleKeyDown(e) {
-    var r, s, l, a, c, h;
+    var r, s, l, a, c, f;
     if (e.ctrlKey || e.altKey || e.metaKey) return;
     const t = this.callbacks.getPosition(), i = e.shiftKey ? this.largeStep : this.step;
     let n = null;
@@ -761,7 +761,7 @@ class ce {
           e.preventDefault(), (a = (l = this.callbacks).onZoomOut) == null || a.call(l);
           break;
         case "0":
-          e.preventDefault(), (h = (c = this.callbacks).onZoomReset) == null || h.call(c);
+          e.preventDefault(), (f = (c = this.callbacks).onZoomReset) == null || f.call(c);
           break;
       }
   }
@@ -836,14 +836,14 @@ class Ge {
     return ((e = this.fullscreenManager) == null ? void 0 : e.getIsFullscreen()) ?? !1;
   }
   update(e) {
-    var s, l, a, c, h, m, b, p;
+    var s, l, a, c, f, m, b, p;
     this.userConfig = { ...this.userConfig, ...e };
     const t = this.config;
     this.config = V(this.userConfig);
     const i = this.config.beforeSrc !== t.beforeSrc, n = this.config.afterSrc !== t.afterSrc, r = !Ve(this.config.cloudimage, t.cloudimage);
     if ((i || n || r) && (this.lazyLoadObserver && (this.lazyLoadObserver.disconnect(), this.lazyLoadObserver = null), this.state.isReady = !1, this.elements.container.classList.add("ci-before-after-loading"), (i || r) && (this.elements.beforeImage.src = this.resolveImageSrc(this.config.beforeSrc)), (n || r) && (this.elements.afterImage.src = this.resolveImageSrc(this.config.afterSrc)), this.registerImageLoadHandlers(i || r, n || r), this.config.cloudimage && !t.cloudimage ? this.initResizeObserver() : !this.config.cloudimage && t.cloudimage && ((s = this.resizeObserver) == null || s.disconnect(), this.resizeObserver = null)), this.config.beforeAlt !== t.beforeAlt && this.elements.beforeImage.setAttribute("alt", this.config.beforeAlt), this.config.afterAlt !== t.afterAlt && this.elements.afterImage.setAttribute("alt", this.config.afterAlt), this.config.aspectRatio !== t.aspectRatio && (this.elements.wrapper.style.aspectRatio = this.config.aspectRatio || ""), this.elements.container.classList.toggle("ci-before-after-theme-dark", this.config.theme === "dark"), this.elements.container.classList.toggle("ci-before-after-container--horizontal", this.config.orientation === "horizontal"), this.elements.container.classList.toggle("ci-before-after-container--vertical", this.config.orientation === "vertical"), this.elements.container.classList.toggle("ci-before-after-container--hover-mode", this.config.mode === "hover"), this.elements.container.classList.toggle("ci-before-after-container--click-mode", this.config.mode === "click"), this.elements.viewport.classList.toggle("ci-before-after-viewport--zoomable", this.config.zoom), (this.config.handleStyle !== t.handleStyle || this.config.orientation !== t.orientation) && this.rebuildHandle(), this.config.mode !== t.mode && ((l = this.sliderGestures) == null || l.updateMode(this.config.mode)), this.config.orientation !== t.orientation && ((a = this.sliderGestures) == null || a.updateOrientation(this.config.orientation)), (this.config.labelsEnabled !== t.labelsEnabled || this.config.labelBefore !== t.labelBefore || this.config.labelAfter !== t.labelAfter || this.config.labelPosition !== t.labelPosition || this.config.orientation !== t.orientation) && this.rebuildLabels(), this.config.zoom !== t.zoom)
       this.rebuildZoom();
-    else if (this.zoomPan && (this.zoomPan.updateConfig(this.config), this.config.scrollHint !== t.scrollHint && ((c = this.scrollHint) == null || c.destroy(), this.scrollHint = null, this.config.scrollHint && (this.scrollHint = new ne(this.elements.container))), (this.config.zoomControls !== t.zoomControls || this.config.zoomControlsPosition !== t.zoomControlsPosition) && ((h = this.zoomControlsEvents) == null || h.destroy(), this.zoomControlsEvents = null, (m = this.zoomControlsEl) == null || m.remove(), this.zoomControlsEl = null, this.elements.container.classList.remove("ci-before-after-container--zoom-top-right"), this.elements.container.classList.remove("ci-before-after-container--zoom-top"), this.elements.container.classList.remove("ci-before-after-container--zoom-left"), this.config.zoomControls))) {
+    else if (this.zoomPan && (this.zoomPan.updateConfig(this.config), this.config.scrollHint !== t.scrollHint && ((c = this.scrollHint) == null || c.destroy(), this.scrollHint = null, this.config.scrollHint && (this.scrollHint = new ne(this.elements.container))), (this.config.zoomControls !== t.zoomControls || this.config.zoomControlsPosition !== t.zoomControlsPosition) && ((f = this.zoomControlsEvents) == null || f.destroy(), this.zoomControlsEvents = null, (m = this.zoomControlsEl) == null || m.remove(), this.zoomControlsEl = null, this.elements.container.classList.remove("ci-before-after-container--zoom-top-right"), this.elements.container.classList.remove("ci-before-after-container--zoom-top"), this.elements.container.classList.remove("ci-before-after-container--zoom-left"), this.config.zoomControls))) {
       const g = oe(
         this.config.zoomControlsPosition,
         {
@@ -871,25 +871,25 @@ class Ge {
     ), this.updatePosition(this.state.position);
   }
   destroy() {
-    var e, t, i, n, r, s, l, a, c, h, m;
-    (e = this.sliderGestures) == null || e.destroy(), (t = this.zoomGestures) == null || t.destroy(), (i = this.zoomPan) == null || i.destroy(), this.zoomPan = null, (n = this.scrollHint) == null || n.destroy(), (r = this.fullscreenManager) == null || r.destroy(), (s = this.entranceAnimation) == null || s.destroy(), (l = this.keyboardHandler) == null || l.destroy(), this.events.destroy(), this.imageEvents.destroy(), (a = this.resizeObserver) == null || a.disconnect(), (c = this.lazyLoadObserver) == null || c.disconnect(), this.lazyLoadObserver = null, (h = this.zoomControlsEvents) == null || h.destroy(), this.zoomControlsEvents = null, (m = this.zoomControlsEl) == null || m.remove(), this.resizeDebounceTimer && clearTimeout(this.resizeDebounceTimer), this.animTransitionTimer && clearTimeout(this.animTransitionTimer), this.elements.container.innerHTML = "", this.elements.container.removeAttribute("role"), this.elements.container.removeAttribute("aria-label"), this.elements.container.className = this.elements.container.className.split(" ").filter((b) => !b.startsWith("ci-before-after")).join(" ");
+    var e, t, i, n, r, s, l, a, c, f, m;
+    (e = this.sliderGestures) == null || e.destroy(), (t = this.zoomGestures) == null || t.destroy(), (i = this.zoomPan) == null || i.destroy(), this.zoomPan = null, (n = this.scrollHint) == null || n.destroy(), (r = this.fullscreenManager) == null || r.destroy(), (s = this.entranceAnimation) == null || s.destroy(), (l = this.keyboardHandler) == null || l.destroy(), this.events.destroy(), this.imageEvents.destroy(), (a = this.resizeObserver) == null || a.disconnect(), (c = this.lazyLoadObserver) == null || c.disconnect(), this.lazyLoadObserver = null, (f = this.zoomControlsEvents) == null || f.destroy(), this.zoomControlsEvents = null, (m = this.zoomControlsEl) == null || m.remove(), this.resizeDebounceTimer && clearTimeout(this.resizeDebounceTimer), this.animTransitionTimer && clearTimeout(this.animTransitionTimer), this.elements.container.innerHTML = "", this.elements.container.removeAttribute("role"), this.elements.container.removeAttribute("aria-label"), this.elements.container.className = this.elements.container.className.split(" ").filter((b) => !b.startsWith("ci-before-after")).join(" ");
   }
   // --- Private Methods ---
   buildDOM(e) {
     e.innerHTML = "";
     const t = `ci-before-after-container--${this.config.orientation}`;
     e.classList.add("ci-before-after-container", t), this.config.mode === "hover" && e.classList.add("ci-before-after-container--hover-mode"), this.config.mode === "click" && e.classList.add("ci-before-after-container--click-mode"), this.config.theme === "dark" && e.classList.add("ci-before-after-theme-dark"), e.classList.add("ci-before-after-loading"), _e(e);
-    const i = f("div", "ci-before-after-viewport");
+    const i = h("div", "ci-before-after-viewport");
     this.config.zoom && i.classList.add("ci-before-after-viewport--zoomable");
-    const n = f("div", "ci-before-after-wrapper");
+    const n = h("div", "ci-before-after-wrapper");
     this.config.aspectRatio && (n.style.aspectRatio = this.config.aspectRatio);
-    const r = f("img", "ci-before-after-image ci-before-after-before", {
+    const r = h("img", "ci-before-after-image ci-before-after-before", {
       alt: this.config.beforeAlt,
       draggable: "false",
       role: "img"
-    }), s = f("div", "ci-before-after-clip");
+    }), s = h("div", "ci-before-after-clip");
     M(s, this.state.position, this.config.orientation);
-    const l = f("img", "ci-before-after-image ci-before-after-after", {
+    const l = h("img", "ci-before-after-image ci-before-after-after", {
       alt: this.config.afterAlt,
       draggable: "false",
       role: "img"
@@ -898,7 +898,7 @@ class Ge {
     const a = ee(this.config.handleStyle, this.config.orientation, this.state.position);
     e.appendChild(a);
     const c = a.querySelector(".ci-before-after-handle-grip");
-    let h = null, m = null;
+    let f = null, m = null;
     if (this.config.labelsEnabled) {
       const b = re(
         this.config.labelBefore,
@@ -906,7 +906,7 @@ class Ge {
         this.config.labelPosition,
         this.config.orientation
       );
-      h = b.before, m = b.after, e.append(h, m);
+      f = b.before, m = b.after, e.append(f, m);
     }
     this.elements = {
       container: e,
@@ -917,7 +917,7 @@ class Ge {
       clip: s,
       handle: a,
       handleGrip: c,
-      labelBefore: h,
+      labelBefore: f,
       labelAfter: m
     };
   }
@@ -1192,11 +1192,11 @@ function Ve(o, e) {
     if (o[n] !== e[n]) return !1;
   return !0;
 }
-const he = ".ci-before-after-container{--ci-before-after-handle-width: 4px;--ci-before-after-handle-color: #ffffff;--ci-before-after-handle-shadow: 0 0 8px rgba(0, 0, 0, .3);--ci-before-after-grip-size: 44px;--ci-before-after-grip-bg: #ffffff;--ci-before-after-grip-border: 2px solid rgba(0, 0, 0, .1);--ci-before-after-grip-border-radius: 50%;--ci-before-after-grip-shadow: 0 2px 8px rgba(0, 0, 0, .2);--ci-before-after-grip-icon-color: #333333;--ci-before-after-grip-icon-size: 20px;--ci-before-after-grip-hover-bg: #f0f0f0;--ci-before-after-grip-hover-shadow: 0 4px 16px rgba(0, 0, 0, .25);--ci-before-after-grip-active-bg: #e0e0e0;--ci-before-after-grip-active-scale: .95;--ci-before-after-label-font-family: inherit;--ci-before-after-label-font-size: 14px;--ci-before-after-label-font-weight: 600;--ci-before-after-label-color: #ffffff;--ci-before-after-label-bg: rgba(0, 0, 0, .5);--ci-before-after-label-padding: 6px 14px;--ci-before-after-label-border-radius: 6px;--ci-before-after-label-offset-x: 12px;--ci-before-after-label-offset-y: 12px;--ci-before-after-label-backdrop-filter: blur(4px);--ci-before-after-handle-transition: .15s ease;--ci-before-after-slide-transition: 0ms;--ci-before-after-animate-duration: .8s;--ci-before-after-animate-easing: ease-out;--ci-before-after-zoom-controls-bg: rgba(255, 255, 255, .9);--ci-before-after-zoom-controls-color: #333333;--ci-before-after-zoom-controls-border-radius: 8px;--ci-before-after-zoom-controls-shadow: 0 2px 8px rgba(0, 0, 0, .15)}.ci-before-after-theme-dark{--ci-before-after-handle-color: #1a1a1a;--ci-before-after-handle-shadow: 0 0 8px rgba(255, 255, 255, .2);--ci-before-after-grip-bg: #1a1a1a;--ci-before-after-grip-border: 2px solid rgba(255, 255, 255, .2);--ci-before-after-grip-shadow: 0 2px 8px rgba(0, 0, 0, .5);--ci-before-after-grip-icon-color: #f0f0f0;--ci-before-after-grip-hover-bg: #2a2a2a;--ci-before-after-grip-active-bg: #333333;--ci-before-after-label-bg: rgba(0, 0, 0, .45);--ci-before-after-label-color: #f0f0f0;--ci-before-after-zoom-controls-bg: rgba(30, 30, 30, .9);--ci-before-after-zoom-controls-color: #f0f0f0}.ci-before-after-container{position:relative;overflow:hidden;width:100%;border-radius:var(--ci-before-after-border-radius, 0px);box-shadow:var(--ci-before-after-shadow, none);user-select:none;-webkit-user-select:none;touch-action:pan-y;line-height:0}.ci-before-after-container--vertical{touch-action:pan-x}.ci-before-after-container--fullscreen{background:#000;display:flex;align-items:center;justify-content:center;width:100vw;height:100vh}.ci-before-after-container--fullscreen .ci-before-after-wrapper{max-height:100vh}.ci-before-after-container--fullscreen .ci-before-after-image{object-fit:contain}.ci-before-after-container--dragging{cursor:ew-resize}.ci-before-after-container--vertical.ci-before-after-container--dragging{cursor:ns-resize}.ci-before-after-viewport{position:relative;width:100%;height:100%;transform-origin:0 0}.ci-before-after-viewport--zoomable{will-change:transform}.ci-before-after-wrapper{position:relative;width:100%;overflow:hidden}.ci-before-after-image{display:block;width:100%;height:100%;object-fit:cover}.ci-before-after-before{display:block;width:100%}.ci-before-after-after{position:absolute;top:0;left:0;width:100%;height:100%}.ci-before-after-clip{position:absolute;top:0;left:0;right:0;bottom:0}.ci-before-after-handle{position:absolute;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10;transform:translate(-50%);cursor:ew-resize;outline:none}.ci-before-after-handle:focus-visible .ci-before-after-handle-grip{outline:3px solid #4d90fe;outline-offset:2px}.ci-before-after-container--vertical .ci-before-after-handle{top:auto;bottom:auto;left:0;right:0;flex-direction:row;transform:translateY(-50%);cursor:ns-resize}.ci-before-after-handle-line{flex:1;width:var(--ci-before-after-handle-width);background:var(--ci-before-after-handle-color);box-shadow:var(--ci-before-after-handle-shadow)}.ci-before-after-container--vertical .ci-before-after-handle-line{width:auto;height:var(--ci-before-after-handle-width);flex:1}.ci-before-after-handle-grip{display:flex;align-items:center;justify-content:center;width:var(--ci-before-after-grip-size);height:var(--ci-before-after-grip-size);background:var(--ci-before-after-grip-bg);border:var(--ci-before-after-grip-border);border-radius:var(--ci-before-after-grip-border-radius);box-shadow:var(--ci-before-after-grip-shadow);color:var(--ci-before-after-grip-icon-color);flex-shrink:0;transition:background .15s ease,box-shadow .15s ease,transform .15s ease}.ci-before-after-handle-grip svg{width:var(--ci-before-after-grip-icon-size);height:var(--ci-before-after-grip-icon-size)}.ci-before-after-handle-grip:hover,.ci-before-after-handle:hover .ci-before-after-handle-grip{background:var(--ci-before-after-grip-hover-bg);box-shadow:var(--ci-before-after-grip-hover-shadow);transform:scale(1.1)}.ci-before-after-container--dragging .ci-before-after-handle-grip{background:var(--ci-before-after-grip-active-bg);transform:scale(var(--ci-before-after-grip-active-scale))}.ci-before-after-handle--line .ci-before-after-handle-grip,.ci-before-after-handle--line .ci-before-after-handle-grip--pill{width:8px;height:32px;border-radius:4px}.ci-before-after-container--vertical .ci-before-after-handle--line .ci-before-after-handle-grip{width:32px;height:8px}.ci-before-after-handle--circle .ci-before-after-handle-line{display:none}.ci-before-after-label{position:absolute;z-index:5;font-family:var(--ci-before-after-label-font-family);font-size:var(--ci-before-after-label-font-size);font-weight:var(--ci-before-after-label-font-weight);color:var(--ci-before-after-label-color);background:var(--ci-before-after-label-bg);padding:var(--ci-before-after-label-padding);border-radius:var(--ci-before-after-label-border-radius);backdrop-filter:var(--ci-before-after-label-backdrop-filter);-webkit-backdrop-filter:var(--ci-before-after-label-backdrop-filter);pointer-events:none;line-height:1.2;transition:opacity .2s ease;opacity:1}.ci-before-after-label--hidden{opacity:0}.ci-before-after-container--horizontal .ci-before-after-label--top.ci-before-after-label-before{top:var(--ci-before-after-label-offset-y);left:25%;transform:translate(-50%)}.ci-before-after-container--horizontal .ci-before-after-label--top.ci-before-after-label-after{top:var(--ci-before-after-label-offset-y);left:75%;transform:translate(-50%)}.ci-before-after-container--horizontal .ci-before-after-label--bottom.ci-before-after-label-before{bottom:var(--ci-before-after-label-offset-y);left:25%;transform:translate(-50%)}.ci-before-after-container--horizontal .ci-before-after-label--bottom.ci-before-after-label-after{bottom:var(--ci-before-after-label-offset-y);left:75%;transform:translate(-50%)}.ci-before-after-container--vertical .ci-before-after-label--top.ci-before-after-label-before{top:var(--ci-before-after-label-offset-y);left:var(--ci-before-after-label-offset-x)}.ci-before-after-container--vertical .ci-before-after-label--top.ci-before-after-label-after{bottom:var(--ci-before-after-label-offset-y);left:var(--ci-before-after-label-offset-x)}.ci-before-after-container--vertical .ci-before-after-label--bottom.ci-before-after-label-before{top:var(--ci-before-after-label-offset-y);right:var(--ci-before-after-label-offset-x)}.ci-before-after-container--vertical .ci-before-after-label--bottom.ci-before-after-label-after{bottom:var(--ci-before-after-label-offset-y);right:var(--ci-before-after-label-offset-x)}.ci-before-after-container--vertical.ci-before-after-container--zoom-left .ci-before-after-label--top.ci-before-after-label-before,.ci-before-after-container--vertical.ci-before-after-container--zoom-left .ci-before-after-label--top.ci-before-after-label-after{left:calc(var(--ci-before-after-label-offset-x) + 44px)}.ci-before-after-zoom-controls{position:absolute;z-index:20;display:flex;gap:2px;background:var(--ci-before-after-zoom-controls-bg);border-radius:var(--ci-before-after-zoom-controls-border-radius);box-shadow:var(--ci-before-after-zoom-controls-shadow);padding:0;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.ci-before-after-zoom-controls button{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:transparent;color:var(--ci-before-after-zoom-controls-color);cursor:pointer;border-radius:6px;padding:0;transition:background .15s ease}.ci-before-after-zoom-controls button:hover{background:#00000014}.ci-before-after-theme-dark .ci-before-after-zoom-controls button:hover{background:#ffffff1f}.ci-before-after-zoom-controls button:focus-visible{outline:2px solid #4d90fe;outline-offset:-2px}.ci-before-after-zoom-controls--top-left{top:12px;left:12px}.ci-before-after-zoom-controls--top-center{top:12px;left:50%;transform:translate(-50%)}.ci-before-after-zoom-controls--top-right{top:12px;right:12px}.ci-before-after-zoom-controls--bottom-left{bottom:12px;left:12px}.ci-before-after-zoom-controls--bottom-center{bottom:12px;left:50%;transform:translate(-50%)}.ci-before-after-zoom-controls--bottom-right{bottom:12px;right:12px}.ci-before-after-fullscreen-btn{position:absolute;top:12px;right:12px;z-index:20;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:var(--ci-before-after-zoom-controls-bg);color:var(--ci-before-after-zoom-controls-color);border-radius:8px;cursor:pointer;box-shadow:var(--ci-before-after-zoom-controls-shadow);padding:0;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .15s ease}.ci-before-after-fullscreen-btn:hover{background:#e6e6e6f2}.ci-before-after-theme-dark .ci-before-after-fullscreen-btn:hover{background:#323232f2}.ci-before-after-fullscreen-btn:focus-visible{outline:2px solid #4d90fe;outline-offset:2px}.ci-before-after-container--zoom-top-right .ci-before-after-fullscreen-btn{right:132px}.ci-before-after-container--zoom-top.ci-before-after-container--horizontal .ci-before-after-label--top{top:auto;bottom:var(--ci-before-after-label-offset-y)}.ci-before-after-scroll-hint{position:absolute;bottom:50%;left:50%;transform:translate(-50%,50%);z-index:30;background:#000000bf;color:#fff;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .2s ease;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);line-height:1.4}.ci-before-after-scroll-hint--visible{opacity:1}.ci-before-after-loading .ci-before-after-wrapper{aspect-ratio:var(--ci-before-after-aspect-ratio, auto);min-height:200px;background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0,#f0f0f0 75%);background-size:200% 100%;animation:ci-before-after-shimmer 1.5s infinite}.ci-before-after-theme-dark.ci-before-after-loading .ci-before-after-wrapper{background:linear-gradient(90deg,#2a2a2a 25%,#333,#2a2a2a 75%);background-size:200% 100%}@keyframes ci-before-after-shimmer{0%{background-position:-200% 0}to{background-position:200% 0}}.ci-before-after-container--hover-mode{cursor:ew-resize}.ci-before-after-container--vertical.ci-before-after-container--hover-mode{cursor:ns-resize}.ci-before-after-container--click-mode{cursor:pointer}@media(prefers-reduced-motion:reduce){.ci-before-after-container,.ci-before-after-container *{animation:none!important;transition-duration:.01ms!important}}";
+const fe = ".ci-before-after-container{--ci-before-after-handle-width: 4px;--ci-before-after-handle-color: #ffffff;--ci-before-after-handle-shadow: 0 0 8px rgba(0, 0, 0, .3);--ci-before-after-grip-size: 44px;--ci-before-after-grip-bg: #ffffff;--ci-before-after-grip-border: 2px solid rgba(0, 0, 0, .1);--ci-before-after-grip-border-radius: 50%;--ci-before-after-grip-shadow: 0 2px 8px rgba(0, 0, 0, .2);--ci-before-after-grip-icon-color: #333333;--ci-before-after-grip-icon-size: 20px;--ci-before-after-grip-hover-bg: #f0f0f0;--ci-before-after-grip-hover-shadow: 0 4px 16px rgba(0, 0, 0, .25);--ci-before-after-grip-active-bg: #e0e0e0;--ci-before-after-grip-active-scale: .95;--ci-before-after-label-font-family: inherit;--ci-before-after-label-font-size: 14px;--ci-before-after-label-font-weight: 600;--ci-before-after-label-color: #ffffff;--ci-before-after-label-bg: rgba(0, 0, 0, .5);--ci-before-after-label-padding: 6px 14px;--ci-before-after-label-border-radius: 6px;--ci-before-after-label-offset-x: 12px;--ci-before-after-label-offset-y: 12px;--ci-before-after-label-backdrop-filter: blur(4px);--ci-before-after-handle-transition: .15s ease;--ci-before-after-slide-transition: 0ms;--ci-before-after-animate-duration: .8s;--ci-before-after-animate-easing: ease-out;--ci-before-after-zoom-controls-bg: rgba(255, 255, 255, .9);--ci-before-after-zoom-controls-color: #333333;--ci-before-after-zoom-controls-border-radius: 8px;--ci-before-after-zoom-controls-shadow: 0 2px 8px rgba(0, 0, 0, .15)}.ci-before-after-theme-dark{--ci-before-after-handle-color: #1a1a1a;--ci-before-after-handle-shadow: 0 0 8px rgba(255, 255, 255, .2);--ci-before-after-grip-bg: #1a1a1a;--ci-before-after-grip-border: 2px solid rgba(255, 255, 255, .2);--ci-before-after-grip-shadow: 0 2px 8px rgba(0, 0, 0, .5);--ci-before-after-grip-icon-color: #f0f0f0;--ci-before-after-grip-hover-bg: #2a2a2a;--ci-before-after-grip-active-bg: #333333;--ci-before-after-label-bg: rgba(0, 0, 0, .45);--ci-before-after-label-color: #f0f0f0;--ci-before-after-zoom-controls-bg: rgba(30, 30, 30, .9);--ci-before-after-zoom-controls-color: #f0f0f0}.ci-before-after-container{position:relative;overflow:hidden;width:100%;border-radius:var(--ci-before-after-border-radius, 0px);box-shadow:var(--ci-before-after-shadow, none);user-select:none;-webkit-user-select:none;touch-action:pan-y;line-height:0}.ci-before-after-container--vertical{touch-action:pan-x}.ci-before-after-container--fullscreen{background:#000;display:flex;align-items:center;justify-content:center;width:100vw;height:100vh}.ci-before-after-container--fullscreen .ci-before-after-viewport{height:auto}.ci-before-after-container--fullscreen .ci-before-after-wrapper{max-height:100vh}.ci-before-after-container--fullscreen .ci-before-after-image{object-fit:contain}.ci-before-after-container--dragging{cursor:ew-resize}.ci-before-after-container--vertical.ci-before-after-container--dragging{cursor:ns-resize}.ci-before-after-viewport{position:relative;width:100%;height:100%;transform-origin:0 0}.ci-before-after-viewport--zoomable{will-change:transform}.ci-before-after-wrapper{position:relative;width:100%;overflow:hidden}.ci-before-after-image{display:block;width:100%;height:100%;object-fit:cover}.ci-before-after-before{display:block;width:100%}.ci-before-after-after{position:absolute;top:0;left:0;width:100%;height:100%}.ci-before-after-clip{position:absolute;top:0;left:0;right:0;bottom:0}.ci-before-after-handle{position:absolute;top:0;bottom:0;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10;transform:translate(-50%);cursor:ew-resize;outline:none}.ci-before-after-handle:focus-visible .ci-before-after-handle-grip{outline:3px solid #4d90fe;outline-offset:2px}.ci-before-after-container--vertical .ci-before-after-handle{top:auto;bottom:auto;left:0;right:0;flex-direction:row;transform:translateY(-50%);cursor:ns-resize}.ci-before-after-handle-line{flex:1;width:var(--ci-before-after-handle-width);background:var(--ci-before-after-handle-color);box-shadow:var(--ci-before-after-handle-shadow)}.ci-before-after-container--vertical .ci-before-after-handle-line{width:auto;height:var(--ci-before-after-handle-width);flex:1}.ci-before-after-handle-grip{display:flex;align-items:center;justify-content:center;width:var(--ci-before-after-grip-size);height:var(--ci-before-after-grip-size);background:var(--ci-before-after-grip-bg);border:var(--ci-before-after-grip-border);border-radius:var(--ci-before-after-grip-border-radius);box-shadow:var(--ci-before-after-grip-shadow);color:var(--ci-before-after-grip-icon-color);flex-shrink:0;transition:background .15s ease,box-shadow .15s ease,transform .15s ease}.ci-before-after-handle-grip svg{width:var(--ci-before-after-grip-icon-size);height:var(--ci-before-after-grip-icon-size)}.ci-before-after-handle-grip:hover,.ci-before-after-handle:hover .ci-before-after-handle-grip{background:var(--ci-before-after-grip-hover-bg);box-shadow:var(--ci-before-after-grip-hover-shadow);transform:scale(1.1)}.ci-before-after-container--dragging .ci-before-after-handle-grip{background:var(--ci-before-after-grip-active-bg);transform:scale(var(--ci-before-after-grip-active-scale))}.ci-before-after-handle--line .ci-before-after-handle-grip,.ci-before-after-handle--line .ci-before-after-handle-grip--pill{width:8px;height:32px;border-radius:4px}.ci-before-after-container--vertical .ci-before-after-handle--line .ci-before-after-handle-grip{width:32px;height:8px}.ci-before-after-handle--circle .ci-before-after-handle-line{display:none}.ci-before-after-label{position:absolute;z-index:5;font-family:var(--ci-before-after-label-font-family);font-size:var(--ci-before-after-label-font-size);font-weight:var(--ci-before-after-label-font-weight);color:var(--ci-before-after-label-color);background:var(--ci-before-after-label-bg);padding:var(--ci-before-after-label-padding);border-radius:var(--ci-before-after-label-border-radius);backdrop-filter:var(--ci-before-after-label-backdrop-filter);-webkit-backdrop-filter:var(--ci-before-after-label-backdrop-filter);pointer-events:none;line-height:1.2;transition:opacity .2s ease;opacity:1}.ci-before-after-label--hidden{opacity:0}.ci-before-after-container--horizontal .ci-before-after-label--top.ci-before-after-label-before{top:var(--ci-before-after-label-offset-y);left:25%;transform:translate(-50%)}.ci-before-after-container--horizontal .ci-before-after-label--top.ci-before-after-label-after{top:var(--ci-before-after-label-offset-y);left:75%;transform:translate(-50%)}.ci-before-after-container--horizontal .ci-before-after-label--bottom.ci-before-after-label-before{bottom:var(--ci-before-after-label-offset-y);left:25%;transform:translate(-50%)}.ci-before-after-container--horizontal .ci-before-after-label--bottom.ci-before-after-label-after{bottom:var(--ci-before-after-label-offset-y);left:75%;transform:translate(-50%)}.ci-before-after-container--vertical .ci-before-after-label--top.ci-before-after-label-before{top:var(--ci-before-after-label-offset-y);left:var(--ci-before-after-label-offset-x)}.ci-before-after-container--vertical .ci-before-after-label--top.ci-before-after-label-after{bottom:var(--ci-before-after-label-offset-y);left:var(--ci-before-after-label-offset-x)}.ci-before-after-container--vertical .ci-before-after-label--bottom.ci-before-after-label-before{top:var(--ci-before-after-label-offset-y);right:var(--ci-before-after-label-offset-x)}.ci-before-after-container--vertical .ci-before-after-label--bottom.ci-before-after-label-after{bottom:var(--ci-before-after-label-offset-y);right:var(--ci-before-after-label-offset-x)}.ci-before-after-container--vertical.ci-before-after-container--zoom-left .ci-before-after-label--top.ci-before-after-label-before,.ci-before-after-container--vertical.ci-before-after-container--zoom-left .ci-before-after-label--top.ci-before-after-label-after{left:calc(var(--ci-before-after-label-offset-x) + 44px)}.ci-before-after-zoom-controls{position:absolute;z-index:20;display:flex;gap:2px;background:var(--ci-before-after-zoom-controls-bg);border-radius:var(--ci-before-after-zoom-controls-border-radius);box-shadow:var(--ci-before-after-zoom-controls-shadow);padding:0;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}.ci-before-after-zoom-controls button{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:transparent;color:var(--ci-before-after-zoom-controls-color);cursor:pointer;border-radius:6px;padding:0;transition:background .15s ease}.ci-before-after-zoom-controls button:hover{background:#00000014}.ci-before-after-theme-dark .ci-before-after-zoom-controls button:hover{background:#ffffff1f}.ci-before-after-zoom-controls button:focus-visible{outline:2px solid #4d90fe;outline-offset:-2px}.ci-before-after-zoom-controls--top-left{top:12px;left:12px}.ci-before-after-zoom-controls--top-center{top:12px;left:50%;transform:translate(-50%)}.ci-before-after-zoom-controls--top-right{top:12px;right:12px}.ci-before-after-zoom-controls--bottom-left{bottom:12px;left:12px}.ci-before-after-zoom-controls--bottom-center{bottom:12px;left:50%;transform:translate(-50%)}.ci-before-after-zoom-controls--bottom-right{bottom:12px;right:12px}.ci-before-after-fullscreen-btn{position:absolute;top:12px;right:12px;z-index:20;display:flex;align-items:center;justify-content:center;width:36px;height:36px;border:none;background:var(--ci-before-after-zoom-controls-bg);color:var(--ci-before-after-zoom-controls-color);border-radius:8px;cursor:pointer;box-shadow:var(--ci-before-after-zoom-controls-shadow);padding:0;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);transition:background .15s ease}.ci-before-after-fullscreen-btn:hover{background:#e6e6e6f2}.ci-before-after-theme-dark .ci-before-after-fullscreen-btn:hover{background:#323232f2}.ci-before-after-fullscreen-btn:focus-visible{outline:2px solid #4d90fe;outline-offset:2px}.ci-before-after-container--zoom-top-right .ci-before-after-fullscreen-btn{right:132px}.ci-before-after-container--zoom-top.ci-before-after-container--horizontal .ci-before-after-label--top{top:auto;bottom:var(--ci-before-after-label-offset-y)}.ci-before-after-scroll-hint{position:absolute;bottom:50%;left:50%;transform:translate(-50%,50%);z-index:30;background:#000000bf;color:#fff;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:500;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .2s ease;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);line-height:1.4}.ci-before-after-scroll-hint--visible{opacity:1}.ci-before-after-loading .ci-before-after-wrapper{aspect-ratio:var(--ci-before-after-aspect-ratio, auto);min-height:200px;background:linear-gradient(90deg,#f0f0f0 25%,#e0e0e0,#f0f0f0 75%);background-size:200% 100%;animation:ci-before-after-shimmer 1.5s infinite}.ci-before-after-theme-dark.ci-before-after-loading .ci-before-after-wrapper{background:linear-gradient(90deg,#2a2a2a 25%,#333,#2a2a2a 75%);background-size:200% 100%}@keyframes ci-before-after-shimmer{0%{background-position:-200% 0}to{background-position:200% 0}}.ci-before-after-container--hover-mode{cursor:ew-resize}.ci-before-after-container--vertical.ci-before-after-container--hover-mode{cursor:ns-resize}.ci-before-after-container--click-mode{cursor:pointer}@media(prefers-reduced-motion:reduce){.ci-before-after-container,.ci-before-after-container *{animation:none!important;transition-duration:.01ms!important}}";
 class pe extends Ge {
   static autoInit(e) {
     if (!S()) return [];
-    q(he);
+    q(fe);
     const i = (e || document).querySelectorAll("[data-ci-before-after-before-src]"), n = [];
     return i.forEach((r) => {
       const s = ve(r);
@@ -1204,7 +1204,7 @@ class pe extends Ge {
     }), n;
   }
   constructor(e, t) {
-    q(he), super(e, t);
+    q(fe), super(e, t);
   }
 }
 export {

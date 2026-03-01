@@ -97,6 +97,10 @@
   height: 100vh;
 }
 
+.ci-before-after-container--fullscreen .ci-before-after-viewport {
+  height: auto;
+}
+
 .ci-before-after-container--fullscreen .ci-before-after-wrapper {
   max-height: 100vh;
 }
