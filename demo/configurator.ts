@@ -1,5 +1,5 @@
-import CIBeforeAfter from 'js-cloudimage-before-after';
-import type { CIBeforeAfterConfig, CIBeforeAfterInstance } from 'js-cloudimage-before-after';
+import CIBeforeAfter from '@cloudimage/before-after';
+import type { CIBeforeAfterConfig, CIBeforeAfterInstance } from '@cloudimage/before-after';
 import kitchenBefore from './images/kitchen-before.svg';
 import kitchenAfter from './images/kitchen-after.svg';
 

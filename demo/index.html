@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>js-cloudimage-before-after — Interactive Image Comparison Slider</title>
+  <title>@cloudimage/before-after — Interactive Image Comparison Slider</title>
   <link rel="icon" href="https://cdn.prod.website-files.com/623086c828f7c9787009cf20/6267d5ef7488f536294d267b_favicon-256x526.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +27,7 @@
         <a href="#zoom">Zoom</a>
         <a href="#configurator">Configurator</a>
       </div>
-      <a href="https://github.com/scaleflex/js-cloudimage-before-after" class="demo-nav-github" target="_blank" rel="noopener" aria-label="GitHub">
+      <a href="https://github.com/scaleflex/cloudimage-before-after" class="demo-nav-github" target="_blank" rel="noopener" aria-label="GitHub">
         <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
       </a>
       <button class="demo-nav-burger" id="nav-burger" aria-label="Toggle menu" aria-expanded="false">
@@ -40,7 +40,7 @@
     <!-- Hero Section -->
     <section id="hero" class="demo-section demo-hero">
       <div class="demo-section-inner">
-        <div class="demo-hero-badge">js-cloudimage-before-after</div>
+        <div class="demo-hero-badge">@cloudimage/before-after</div>
         <h1>Image <span class="demo-gradient-text">Before After</span></h1>
         <p class="demo-subtitle">Interactive image comparison slider with zoom &amp; pan, drag/hover/click modes, and full accessibility. Zero dependencies, under 12 KB gzipped.</p>
         <div class="demo-hero-actions">
@@ -48,7 +48,7 @@
             Get Started
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
-          <a href="https://github.com/scaleflex/js-cloudimage-before-after" class="demo-btn demo-btn--glass" target="_blank" rel="noopener">
+          <a href="https://github.com/scaleflex/cloudimage-before-after" class="demo-btn demo-btn--glass" target="_blank" rel="noopener">
             <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
             GitHub
           </a>
@@ -73,11 +73,11 @@
           <p>Install from npm or load from CDN &mdash; choose the method that fits your workflow.</p>
           <div class="demo-hero-sandboxes">
             <span class="demo-hero-sandboxes-label">Try it live</span>
-            <a href="https://codesandbox.io/p/devbox/github/scaleflex/js-cloudimage-before-after/tree/main/examples/vanilla" class="demo-btn demo-btn--chip" target="_blank" rel="noopener">
+            <a href="https://codesandbox.io/p/devbox/github/scaleflex/cloudimage-before-after/tree/main/examples/vanilla" class="demo-btn demo-btn--chip" target="_blank" rel="noopener">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
               Vanilla
             </a>
-            <a href="https://codesandbox.io/p/devbox/github/scaleflex/js-cloudimage-before-after/tree/main/examples/react" class="demo-btn demo-btn--chip" target="_blank" rel="noopener">
+            <a href="https://codesandbox.io/p/devbox/github/scaleflex/cloudimage-before-after/tree/main/examples/react" class="demo-btn demo-btn--chip" target="_blank" rel="noopener">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.31 0-.592.068-.846.206C4.747 2.387 4.24 4.462 4.61 7.27c-2.554.834-4.11 2.19-4.11 3.734 0 1.55 1.57 2.92 4.137 3.752-.38 2.79.12 4.855 1.632 5.712.258.147.554.22.857.22 1.35 0 3.118-.966 4.904-2.635 1.794 1.68 3.569 2.655 4.925 2.655.3 0 .59-.073.846-.22 1.507-.854 2.01-2.93 1.64-5.746 2.531-.834 4.06-2.19 4.06-3.738 0-1.543-1.54-2.91-4.094-3.74.38-2.816-.12-4.9-1.637-5.756a1.667 1.667 0 0 0-.848-.213zm-1.576 1.45c.907.515 1.295 2.07.997 4.16a17.68 17.68 0 0 0-2.525-.473 17.74 17.74 0 0 0-1.604-1.925c1.516-1.41 2.916-2.17 3.8-2.17.13 0 .24.024.336.074z"/></svg>
               React
             </a>
@@ -92,14 +92,14 @@
               <div class="demo-feature-title">Install via npm</div>
             </div>
             <div class="demo-code-wrap">
-              <pre><code class="language-bash">npm install js-cloudimage-before-after</code></pre>
+              <pre><code class="language-bash">npm install @cloudimage/before-after</code></pre>
               <button class="demo-copy-btn" aria-label="Copy to clipboard">
                 <svg class="demo-copy-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
                 <svg class="demo-check-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
               </button>
             </div>
             <div class="demo-code-wrap">
-              <pre><code class="language-javascript">import CIBeforeAfter from 'js-cloudimage-before-after';
+              <pre><code class="language-javascript">import CIBeforeAfter from '@cloudimage/before-after';
 
 new CIBeforeAfter('#my-slider', {
   beforeSrc: '/before.jpg',
@@ -119,7 +119,7 @@ new CIBeforeAfter('#my-slider', {
               <div class="demo-feature-title">Use via CDN</div>
             </div>
             <div class="demo-code-wrap demo-code-wrap--fill">
-              <pre><code class="language-html">&lt;script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-before-after/1.0.3/js-cloudimage-before-after.min.js?vh=b67ce8&func=proxy"&gt;&lt;/script&gt;
+              <pre><code class="language-html">&lt;script src="https://scaleflex.cloudimg.io/v7/plugins/cloudimage/before-after/1.0.3/before-after.min.js?vh=b67ce8&func=proxy"&gt;&lt;/script&gt;
 
 &lt;div
   data-ci-before-after-before-src="/before.jpg"
@@ -336,14 +336,14 @@ new CIBeforeAfter('#my-slider', {
       </div>
       <div class="demo-footer-col">
         <h4>Resources</h4>
-        <a href="https://github.com/scaleflex/js-cloudimage-before-after" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.npmjs.com/package/js-cloudimage-before-after" target="_blank" rel="noopener">npm</a>
-        <a href="https://github.com/scaleflex/js-cloudimage-before-after/blob/main/README.md" target="_blank" rel="noopener">Documentation</a>
+        <a href="https://github.com/scaleflex/cloudimage-before-after" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.npmjs.com/package/@cloudimage/before-after" target="_blank" rel="noopener">npm</a>
+        <a href="https://github.com/scaleflex/cloudimage-before-after/blob/main/README.md" target="_blank" rel="noopener">Documentation</a>
       </div>
       <div class="demo-footer-col">
         <h4>Examples</h4>
-        <a href="https://codesandbox.io/p/devbox/github/scaleflex/js-cloudimage-before-after/tree/main/examples/vanilla" target="_blank" rel="noopener">Vanilla Sandbox</a>
-        <a href="https://codesandbox.io/p/devbox/github/scaleflex/js-cloudimage-before-after/tree/main/examples/react" target="_blank" rel="noopener">React Sandbox</a>
+        <a href="https://codesandbox.io/p/devbox/github/scaleflex/cloudimage-before-after/tree/main/examples/vanilla" target="_blank" rel="noopener">Vanilla Sandbox</a>
+        <a href="https://codesandbox.io/p/devbox/github/scaleflex/cloudimage-before-after/tree/main/examples/react" target="_blank" rel="noopener">React Sandbox</a>
       </div>
       <div class="demo-footer-col">
         <h4>Support</h4>
@@ -356,7 +356,7 @@ new CIBeforeAfter('#my-slider', {
           </span>
           Buy Me a Coffee
         </a>
-        <a href="https://github.com/scaleflex/js-cloudimage-before-after/issues" target="_blank" rel="noopener">Report an Issue</a>
+        <a href="https://github.com/scaleflex/cloudimage-before-after/issues" target="_blank" rel="noopener">Report an Issue</a>
         <a href="mailto:hello@cloudimage.io">Contact Us</a>
       </div>
     </div>

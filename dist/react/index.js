@@ -59,7 +59,7 @@ const F = P(
     })), p(() => {
       if (!d.current) return;
       let r = !1, o = null;
-      return import("js-cloudimage-before-after").then(
+      return import("@cloudimage/before-after").then(
         ({ default: b }) => {
           if (r || !d.current) return;
           const C = {
@@ -126,7 +126,7 @@ function Z(e) {
   return p(() => {
     if (!s.current) return;
     let m = !1, l = null;
-    return import("js-cloudimage-before-after").then(
+    return import("@cloudimage/before-after").then(
       ({ default: i }) => {
         m || !s.current || (l = new i(s.current, e), u.current = l, a.current && (l.update(a.current), a.current = null));
       },

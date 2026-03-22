@@ -1,4 +1,4 @@
-# js-cloudimage-before-after — Specification
+# @cloudimage/before-after — Specification
 
 > Interactive before/after image comparison slider with zoom, labels, and accessibility.
 
@@ -29,7 +29,7 @@
 
 ### What
 
-`js-cloudimage-before-after` is an open-source JavaScript library for creating interactive before/after image comparison sliders. Users drag, hover, or click a handle to reveal differences between two images — ideal for renovation showcases, photo retouching, product transformations, medical imaging, and any visual comparison workflow.
+`@cloudimage/before-after` is an open-source JavaScript library for creating interactive before/after image comparison sliders. Users drag, hover, or click a handle to reveal differences between two images — ideal for renovation showcases, photo retouching, product transformations, medical imaging, and any visual comparison workflow.
 
 ### Why
 
@@ -46,7 +46,7 @@ The existing ecosystem for before/after sliders has significant gaps:
 
 ### Positioning
 
-`js-cloudimage-before-after` fills these gaps by providing:
+`@cloudimage/before-after` fills these gaps by providing:
 
 - A **zero-dependency**, TypeScript-first library
 - **Combined zoom/pan + comparison** in a single package — unique in the market
@@ -269,7 +269,7 @@ interface CIBeforeAfterInstance {
 **Usage example:**
 
 ```js
-import CIBeforeAfter from 'js-cloudimage-before-after';
+import CIBeforeAfter from '@cloudimage/before-after';
 
 const slider = new CIBeforeAfter('#renovation', {
   beforeSrc: 'https://example.com/kitchen-before.jpg',
@@ -320,7 +320,7 @@ All configuration is expressed via `data-ci-before-after-*` attributes on the co
 **Auto-initialization (CDN usage):**
 
 ```html
-<script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-before-after/1.0.3/js-cloudimage-before-after.min.js?vh=b67ce8&func=proxy"></script>
+<script src="https://scaleflex.cloudimg.io/v7/plugins/cloudimage/before-after/1.0.3/before-after.min.js?vh=b67ce8&func=proxy"></script>
 <script>CIBeforeAfter.autoInit();</script>
 ```
 
@@ -751,7 +751,7 @@ Labels are `aria-hidden="true"` because the `aria-label` on the container and ha
 ### 8.1 Entry Point
 
 ```ts
-import { CIBeforeAfterViewer, useCIBeforeAfter } from 'js-cloudimage-before-after/react';
+import { CIBeforeAfterViewer, useCIBeforeAfter } from '@cloudimage/before-after/react';
 ```
 
 The React wrapper is a **separate entry point** to avoid bundling React for vanilla JS consumers. React is an **optional peer dependency**.
@@ -796,7 +796,7 @@ interface CIBeforeAfterViewerProps {
 **Usage example:**
 
 ```tsx
-import { CIBeforeAfterViewer } from 'js-cloudimage-before-after/react';
+import { CIBeforeAfterViewer } from '@cloudimage/before-after/react';
 
 function RenovationShowcase() {
   return (
@@ -820,7 +820,7 @@ function RenovationShowcase() {
 Provides direct access to the vanilla `CIBeforeAfterInstance` for imperative control:
 
 ```tsx
-import { useCIBeforeAfter } from 'js-cloudimage-before-after/react';
+import { useCIBeforeAfter } from '@cloudimage/before-after/react';
 
 function RenovationShowcase() {
   const { containerRef, instance } = useCIBeforeAfter({
@@ -846,7 +846,7 @@ The `<CIBeforeAfterViewer>` component forwards a ref exposing instance methods:
 
 ```tsx
 import { useRef } from 'react';
-import { CIBeforeAfterViewer, CIBeforeAfterViewerRef } from 'js-cloudimage-before-after/react';
+import { CIBeforeAfterViewer, CIBeforeAfterViewerRef } from '@cloudimage/before-after/react';
 
 function RenovationShowcase() {
   const viewerRef = useRef<CIBeforeAfterViewerRef>(null);
@@ -970,9 +970,9 @@ All animations and transitions respect the `prefers-reduced-motion: reduce` medi
 
 | Format | File | Use Case |
 |---|---|---|
-| **ESM** | `dist/js-cloudimage-before-after.esm.js` | Modern bundlers (Webpack, Vite, Rollup) |
-| **CJS** | `dist/js-cloudimage-before-after.cjs.js` | Node.js, legacy bundlers |
-| **UMD** | `dist/js-cloudimage-before-after.min.js` | CDN `<script>` tag, exposes `window.CIBeforeAfter` |
+| **ESM** | `dist/before-after.esm.js` | Modern bundlers (Webpack, Vite, Rollup) |
+| **CJS** | `dist/before-after.cjs.js` | Node.js, legacy bundlers |
+| **UMD** | `dist/before-after.min.js` | CDN `<script>` tag, exposes `window.CIBeforeAfter` |
 | **TypeScript** | `dist/index.d.ts` | Type definitions |
 | **React ESM** | `dist/react/index.js` | React wrapper (ESM) |
 | **React CJS** | `dist/react/index.cjs` | React wrapper (CJS) |
@@ -982,20 +982,20 @@ All animations and transitions respect the `prefers-reduced-motion: reduce` medi
 
 ```json
 {
-  "name": "js-cloudimage-before-after",
+  "name": "@cloudimage/before-after",
   "version": "1.0.0",
   "description": "Interactive before/after image comparison slider with zoom, labels, and accessibility",
   "license": "MIT",
   "author": "Scaleflex",
-  "main": "dist/js-cloudimage-before-after.cjs.js",
-  "module": "dist/js-cloudimage-before-after.esm.js",
-  "unpkg": "dist/js-cloudimage-before-after.min.js",
+  "main": "dist/before-after.cjs.js",
+  "module": "dist/before-after.esm.js",
+  "unpkg": "dist/before-after.min.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/js-cloudimage-before-after.esm.js",
-      "require": "./dist/js-cloudimage-before-after.cjs.js"
+      "import": "./dist/before-after.esm.js",
+      "require": "./dist/before-after.cjs.js"
     },
     "./react": {
       "types": "./dist/react/index.d.ts",
@@ -1048,7 +1048,7 @@ All animations and transitions respect the `prefers-reduced-motion: reduce` medi
 The UMD bundle will be available via Scaleflex CDN:
 
 ```
-https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-before-after/1.0.3/js-cloudimage-before-after.min.js?vh=b67ce8&func=proxy
+https://scaleflex.cloudimg.io/v7/plugins/cloudimage/before-after/1.0.3/before-after.min.js?vh=b67ce8&func=proxy
 ```
 
 ### 10.7 Zero Runtime Dependencies
@@ -1060,7 +1060,7 @@ The library has **zero runtime dependencies**. All functionality — slider mech
 ## 11. Project Structure
 
 ```
-js-cloudimage-before-after/
+cloudimage-before-after/
 ├── src/
 │   ├── index.ts                    # Main entry — CIBeforeAfter class + autoInit
 │   ├── core/
@@ -1139,8 +1139,8 @@ js-cloudimage-before-after/
 │   ├── vite.react.config.ts        # React wrapper build config
 │   └── vite.demo.config.ts         # Demo build config
 ├── dist/                           # Built output (CDN bundles committed)
-│   ├── js-cloudimage-before-after.min.js
-│   └── js-cloudimage-before-after.min.js.map
+│   ├── before-after.min.js
+│   └── before-after.min.js.map
 ├── .github/
 │   └── workflows/
 │       ├── deploy-demo.yml         # GitHub Pages deployment workflow
@@ -1160,7 +1160,7 @@ js-cloudimage-before-after/
 
 ## 12. GitHub Pages Demo
 
-The demo site will be hosted at `https://scaleflex.github.io/js-cloudimage-before-after/` and deployed via GitHub Actions.
+The demo site will be hosted at `https://scaleflex.github.io/cloudimage-before-after/` and deployed via GitHub Actions.
 
 ### 12.1 Demo Sections
 
@@ -1196,7 +1196,7 @@ Demo images will be high-quality, royalty-free before/after photographs served v
 - **Landscape/seasons** — same location in different seasons or weather
 - **Restoration** — old photo restored vs original
 
-All demo images served via `https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-before-after/`.
+All demo images served via `https://scaleflex.cloudimg.io/v7/plugins/cloudimage/before-after/`.
 
 ---
 
@@ -1286,7 +1286,7 @@ The vanilla core gracefully handles server-side rendering environments:
 
 ## 14. Competitor Feature Matrix
 
-| Feature | js-cloudimage-before-after | react-compare-slider | img-comparison-slider | react-compare-image | BeerSlider | JuxtaposeJS | DICS | react-before-after-slider-component | before-after.js | comparison-slider | slider-before-after |
+| Feature | @cloudimage/before-after | react-compare-slider | img-comparison-slider | react-compare-image | BeerSlider | JuxtaposeJS | DICS | react-before-after-slider-component | before-after.js | comparison-slider | slider-before-after |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | **TypeScript** | Yes (first-class) | Yes | Yes | No | No | No | No | No | No | No | No |
 | **Zoom & Pan** | Yes (CSS transforms) | No | No | No | No | No | No | No | No | No | No |

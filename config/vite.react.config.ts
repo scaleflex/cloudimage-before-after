@@ -6,10 +6,10 @@ function rewriteMainImport(): Plugin {
   return {
     name: 'rewrite-main-import',
     renderChunk(code) {
-      // Rewrite dynamic import("./js-cloudimage-before-after") to import("js-cloudimage-before-after")
+      // Rewrite dynamic import("./@cloudimage/before-after") to import("@cloudimage/before-after")
       return code.replace(
-        /import\(["']\.\/js-cloudimage-before-after["']\)/g,
-        'import("js-cloudimage-before-after")',
+        /import\(["']\.\/@cloudimage\/before-after["']\)/g,
+        'import("@cloudimage/before-after")',
       );
     },
   };
@@ -41,7 +41,7 @@ export default defineConfig({
       output: {
         paths: (id) => {
           if (id.includes('/src/index') || id.includes('/core/') || id.includes('/utils/') || id.includes('/styles/')) {
-            return 'js-cloudimage-before-after';
+            return '@cloudimage/before-after';
           }
           return id;
         },

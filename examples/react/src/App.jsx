@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { CIBeforeAfterViewer } from 'js-cloudimage-before-after/react';
+import { CIBeforeAfterViewer } from '@cloudimage/before-after/react';
 
 export default function App() {
   const viewerRef = useRef(null);

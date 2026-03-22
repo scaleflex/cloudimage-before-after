@@ -8,9 +8,9 @@ export default defineConfig({
       name: 'CIBeforeAfter',
       formats: ['es', 'cjs', 'umd'],
       fileName: (format) => {
-        if (format === 'es') return 'js-cloudimage-before-after.esm.js';
-        if (format === 'cjs') return 'js-cloudimage-before-after.cjs.js';
-        return 'js-cloudimage-before-after.min.js';
+        if (format === 'es') return 'before-after.esm.js';
+        if (format === 'cjs') return 'before-after.cjs.js';
+        return 'before-after.min.js';
       },
     },
     outDir: resolve(__dirname, '../dist'),

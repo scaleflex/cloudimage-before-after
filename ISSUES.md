@@ -1,6 +1,6 @@
 # Known Issues & Audit Log
 
-> Comprehensive audit of `js-cloudimage-before-after` covering security, bugs, spec compliance, and code quality.
+> Comprehensive audit of `@cloudimage/before-after` covering security, bugs, spec compliance, and code quality.
 
 ---
 

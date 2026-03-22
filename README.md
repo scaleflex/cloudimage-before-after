@@ -2,28 +2,28 @@
   <img src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-360-view/logo_scaleflex_on_white_bg.jpg?vh=91b12d&w=700" alt="Scaleflex" width="350">
 </p>
 
-<h1 align="center">js-cloudimage-before-after</h1>
+<h1 align="center">@cloudimage/before-after</h1>
 
 <p align="center">
   Interactive before/after image comparison slider with zoom, labels, and accessibility. Zero dependencies.
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/js-cloudimage-before-after"><img src="https://img.shields.io/npm/v/js-cloudimage-before-after.svg?style=flat-square" alt="npm version"></a>
-  <a href="https://www.npmjs.com/package/js-cloudimage-before-after"><img src="https://img.shields.io/npm/dm/js-cloudimage-before-after.svg?style=flat-square" alt="npm downloads"></a>
-  <a href="https://github.com/scaleflex/js-cloudimage-before-after/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/js-cloudimage-before-after.svg?style=flat-square" alt="license"></a>
-  <a href="https://bundlephobia.com/package/js-cloudimage-before-after"><img src="https://img.shields.io/bundlephobia/minzip/js-cloudimage-before-after?style=flat-square" alt="bundle size"></a>
+  <a href="https://www.npmjs.com/package/@cloudimage/before-after"><img src="https://img.shields.io/npm/v/@cloudimage/before-after.svg?style=flat-square" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@cloudimage/before-after"><img src="https://img.shields.io/npm/dm/@cloudimage/before-after.svg?style=flat-square" alt="npm downloads"></a>
+  <a href="https://github.com/scaleflex/cloudimage-before-after/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@cloudimage/before-after.svg?style=flat-square" alt="license"></a>
+  <a href="https://bundlephobia.com/package/@cloudimage/before-after"><img src="https://img.shields.io/bundlephobia/minzip/@cloudimage/before-after?style=flat-square" alt="bundle size"></a>
 </p>
 
 <p align="center">
-  <a href="https://scaleflex.github.io/js-cloudimage-before-after/">Live Demo</a> |
-  <a href="https://codesandbox.io/p/devbox/github/scaleflex/js-cloudimage-before-after/tree/main/examples/vanilla">Vanilla Sandbox</a> |
-  <a href="https://codesandbox.io/p/devbox/github/scaleflex/js-cloudimage-before-after/tree/main/examples/react">React Sandbox</a>
+  <a href="https://scaleflex.github.io/cloudimage-before-after/">Live Demo</a> |
+  <a href="https://codesandbox.io/p/devbox/github/scaleflex/cloudimage-before-after/tree/main/examples/vanilla">Vanilla Sandbox</a> |
+  <a href="https://codesandbox.io/p/devbox/github/scaleflex/cloudimage-before-after/tree/main/examples/react">React Sandbox</a>
 </p>
 
 ---
 
-## Why js-cloudimage-before-after?
+## Why @cloudimage/before-after?
 
 Existing before/after sliders are often rigid, inaccessible, or missing features like zoom and vertical orientation. This library was built to fill the gap:
 
@@ -56,13 +56,13 @@ Existing before/after sliders are often rigid, inaccessible, or missing features
 ## Installation
 
 ```bash
-npm install js-cloudimage-before-after
+npm install @cloudimage/before-after
 ```
 
 ### CDN
 
 ```html
-<script src="https://scaleflex.cloudimg.io/v7/plugins/js-cloudimage-before-after/1.0.3/js-cloudimage-before-after.min.js?vh=b67ce8&func=proxy"></script>
+<script src="https://scaleflex.cloudimg.io/v7/plugins/cloudimage/before-after/1.0.3/before-after.min.js?vh=b67ce8&func=proxy"></script>
 ```
 
 ## Quick Start
@@ -70,7 +70,7 @@ npm install js-cloudimage-before-after
 ### JavaScript API
 
 ```js
-import CIBeforeAfter from 'js-cloudimage-before-after';
+import CIBeforeAfter from '@cloudimage/before-after';
 
 const viewer = new CIBeforeAfter('#slider', {
   beforeSrc: 'https://example.com/kitchen-before.jpg',
@@ -180,7 +180,7 @@ CIBeforeAfter.autoInit(root?: HTMLElement): CIBeforeAfterInstance[]
 ## React Usage
 
 ```tsx
-import { CIBeforeAfterViewer, useCIBeforeAfter } from 'js-cloudimage-before-after/react';
+import { CIBeforeAfterViewer, useCIBeforeAfter } from '@cloudimage/before-after/react';
 
 // Component
 function ImageComparison() {

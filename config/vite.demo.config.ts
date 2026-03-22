@@ -3,14 +3,14 @@ import { resolve } from 'path';
 
 export default defineConfig({
   root: resolve(__dirname, '../demo'),
-  base: '/js-cloudimage-before-after/',
+  base: '/cloudimage-before-after/',
   build: {
     outDir: resolve(__dirname, '../docs'),
     emptyOutDir: true,
   },
   resolve: {
     alias: {
-      'js-cloudimage-before-after': resolve(__dirname, '../src/index.ts'),
+      '@cloudimage/before-after': resolve(__dirname, '../src/index.ts'),
     },
   },
 });

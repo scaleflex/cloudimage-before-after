@@ -1,18 +1,18 @@
 {
-  "name": "js-cloudimage-before-after",
+  "name": "@cloudimage/before-after",
   "version": "1.0.3",
   "description": "Interactive before/after image comparison slider with zoom, labels, and accessibility",
   "license": "MIT",
   "author": "Scaleflex",
-  "main": "dist/js-cloudimage-before-after.cjs.js",
-  "module": "dist/js-cloudimage-before-after.esm.js",
-  "unpkg": "dist/js-cloudimage-before-after.min.js",
+  "main": "dist/before-after.cjs.js",
+  "module": "dist/before-after.esm.js",
+  "unpkg": "dist/before-after.min.js",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/js-cloudimage-before-after.esm.js",
-      "require": "./dist/js-cloudimage-before-after.cjs.js"
+      "import": "./dist/before-after.esm.js",
+      "require": "./dist/before-after.cjs.js"
     },
     "./react": {
       "types": "./dist/react/index.d.ts",

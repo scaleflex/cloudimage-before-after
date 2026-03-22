@@ -1,4 +1,4 @@
-import CIBeforeAfter from 'js-cloudimage-before-after';
+import CIBeforeAfter from '@cloudimage/before-after';
 
 new CIBeforeAfter('#slider', {
   beforeSrc:

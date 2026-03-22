@@ -1212,4 +1212,4 @@ export {
   Ge as CIBeforeAfterCore,
   pe as default
 };
-//# sourceMappingURL=js-cloudimage-before-after.esm.js.map
+//# sourceMappingURL=before-after.esm.js.map
