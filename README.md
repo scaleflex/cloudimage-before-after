@@ -62,7 +62,7 @@ npm install @cloudimage/before-after
 ### CDN
 
 ```html
-<script src="https://scaleflex.cloudimg.io/v7/plugins/cloudimage/before-after/1.0.3/before-after.min.js?vh=b67ce8&func=proxy"></script>
+<script src="https://scaleflex.cloudimg.io/v7/plugins/cloudimage/before-after/1.0.3/before-after.min.js?vh=28d4c4&func=proxy"></script>
 ```
 
 ## Quick Start
