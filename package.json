@@ -1,6 +1,6 @@
 {
   "name": "@cloudimage/before-after",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Interactive before/after image comparison slider with zoom, labels, and accessibility",
   "license": "MIT",
   "author": "Scaleflex",
@@ -38,7 +38,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+    "release": "node scripts/release-cdn.mjs plugin"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
